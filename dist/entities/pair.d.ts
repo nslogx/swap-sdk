@@ -3,12 +3,10 @@ import { TokenAmount } from './fractions/tokenAmount';
 import { BigintIsh, ChainId } from '../constants';
 import { Token } from './token';
 export declare class Pair {
-    readonly factoryAddress: string;
-    readonly initCodeHash: string;
+    readonly pairAddress: string;
     readonly liquidityToken: Token;
     private readonly tokenAmounts;
-    static getAddress(tokenA: Token, tokenB: Token, factoryAddress: string, initCodeHash: string): string;
-    constructor(tokenAmountA: TokenAmount, tokenAmountB: TokenAmount, factoryAddress: string, initCodeHash: string);
+    constructor(tokenAmountA: TokenAmount, tokenAmountB: TokenAmount, pairAddress: string);
     /**
      * Returns true if the token is either token0 or token1
      * @param token to check
